@@ -8,7 +8,6 @@ import { Route,Routes } from 'react-router-dom'
 
 
 const App = () => {
-  const url="https://food-delivery-backend-whsh.onrender.com"
   return (
     <div>
       <Navbar/>
@@ -18,7 +17,7 @@ const App = () => {
         <Routes>
           <Route path='/add' element={<Add/>}></Route>
           <Route path='/list' element={<List/>}></Route>
-          <Route path='/orders' element={<Orders url={url}/>}></Route>
+          <Route path='/orders' element={<Orders/>}></Route>
 
         </Routes>
       </div>
