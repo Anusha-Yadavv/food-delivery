@@ -14,21 +14,36 @@ const FoodItem = ({ id, name, description, image, price }) => {
         {!cartItems[id] ? (
           <img
             className="add"
-            onClick={() => addToCart(id)}
+            onClick={() => {
+              toast(<b>Item added to cart!</b>);
+
+              addToCart(id);
+
+              console.log("clicking");
+            }}
             src={assets.add_icon_green}
             alt=""
           />
         ) : (
           <div className="food-item-counter">
             <img
-              onClick={() => removeFromCart(id)}
+              onClick={() => {
+                toast(<b>Item removed cart!</b>);
+                removeFromCart(id);
+              }}
               src={assets.remove_icon_red}
               alt=""
             />
 
             <p>{cartItems[id]}</p>
             <img
-              onClick={() => addToCart(id)}
+              onClick={() => {
+              toast(<b>Item added to cart!</b>);
+
+              addToCart(id);
+
+              console.log("clicking");
+            }}
               src={assets.add_icon_green}
               alt=""
             />
