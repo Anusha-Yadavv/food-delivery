@@ -2,6 +2,8 @@ import React, { useContext, useState } from "react";
 import "./FoodItem.css";
 import { assets } from "../../assets/assets";
 import { StoreContext } from "../Context/StoreContext";
+import { toast } from "react-toastify";
+
 
 const FoodItem = ({ id, name, description, image, price }) => {
   // const [itemCount,setItemCount]=useState(0);
