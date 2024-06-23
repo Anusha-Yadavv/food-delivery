@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 const Cart = () => {
   const navigate=useNavigate()
 
-  const { cartItems, food_list, removeFromCart,getTotalCartAmount,url } = useContext(StoreContext);
+  const { cartItems, food_list, removeFromCart,getTotalCartAmount,url,token } = useContext(StoreContext);
   return (
     <div className="cart">
       <div className="cart-items">
