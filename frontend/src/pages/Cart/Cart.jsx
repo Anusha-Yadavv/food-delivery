@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./Cart.css";
 import { StoreContext } from "../../components/Context/StoreContext";
 import { useNavigate } from "react-router-dom";
-// import { toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 
 const Cart = () => {
@@ -61,8 +61,8 @@ const Cart = () => {
               <b>Rs. {getTotalCartAmount()===0?0:getTotalCartAmount()+2}</b>
             </div>
           </div>
-{/*           <button onClick={()=> !token ? toast("Please Sign in to place your order :)")navigate('/order')}>PROCEED TO CHECKOUT</button> */}
-                    <button onClick={()=> navigate('/order')}>PROCEED TO CHECKOUT</button>
+          <button onClick={()=> !token ? toast("Please Sign in to place your order :)")navigate('/order')}>PROCEED TO CHECKOUT</button>
+{/*                     <button onClick={()=> navigate('/order')}>PROCEED TO CHECKOUT</button> */}
 
 
           
