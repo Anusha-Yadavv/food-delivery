@@ -8,7 +8,7 @@ import { Route,Routes } from 'react-router-dom'
 
 
 const App = () => {
-  const url="http://localhost:8000"
+  const url="https://food-delivery-backend-whsh.onrender.com"
   return (
     <div>
       <Navbar/>
