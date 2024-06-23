@@ -31,7 +31,7 @@ const placeOrder=async(req,res)=>{
         line_items.push({
             price_data:{
                 currency:"inr",
-                price_data:{
+                product_data:{
                     name:"Delivery Charges"
                 },
                 unit_amount:2*100*80
