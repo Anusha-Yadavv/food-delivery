@@ -14,11 +14,14 @@ const Verify = () => {
     const verifyPayment=async(req,res)=>{
         const response=await axios.post(url+"/api/order/verify",{success,orderId});
         if(response.data.success){
-            navigate("/myOrders");
+            navigate("/myorders");
         }else{
             navigate('/');
         }
     }
+    useEffect(()=>{
+        verifyPayment()
+    },[])
   return (
     <div className='verify'>
         <div className="spinner"></div>
