@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import "./MyOrders.css";
 import { StoreContext } from "../../components/Context/StoreContext";
 import axios from "axios";
+import { assets } from "../../assets/assets";
+
 
 const MyOrders = () => {
   const { token, url } = useContext(StoreContext);
@@ -21,12 +23,12 @@ const MyOrders = () => {
     if (token) {
       fetchOrders();
     }
-  }, []);
+  }, [token]);
   return (
     <div className="my-orders">
       <h2>My Orders</h2>
       <div className="container">
-        {data.map((data, index) => {
+        {data.map((order, index) => {
           return (
             <div key={index} className="my-orders-order">
               <img src={assets.parcel_icon} alt="" />
