@@ -32,7 +32,7 @@ const Footer = () => {
             <div className="footer-content-right">
                 <h2>GET IN TOUCH</h2>
                 <ul>
-                    <li>9999999994889</li>
+                    <li>97013184988</li>
                     <li>tomoto@gmail.com</li>
                 </ul>
 
