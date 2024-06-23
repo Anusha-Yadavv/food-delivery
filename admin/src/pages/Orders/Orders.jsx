@@ -7,7 +7,7 @@ import axios from "axios";
 import { assets } from "../../assets/assets";
 
 
-const Orders = ({ url }) => {
+const Orders = () => {
   const url="https://food-delivery-backend-whsh.onrender.com"
 
   const [orders, setOrders] = useState([]);
