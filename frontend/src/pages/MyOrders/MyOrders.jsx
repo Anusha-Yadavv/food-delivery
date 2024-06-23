@@ -11,7 +11,7 @@ const MyOrders = () => {
 
   const fetchOrders = async () => {
     const response = await axios.post(
-      url + "/api/orders/userorders",
+      url + "/api/order/userorders",
       {},
       { headers: { token } }
     );
