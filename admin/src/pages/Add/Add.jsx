@@ -6,7 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Add = () => {
-  const URL = "http://localhost:8000";
+  const URL = "https://food-delivery-backend-whsh.onrender.com";
 
   const [image, setImage] = useState(false);
   const [data, setData] = useState({
