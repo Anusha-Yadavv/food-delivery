@@ -8,6 +8,8 @@ import { assets } from "../../assets/assets";
 
 
 const Orders = ({ url }) => {
+  const url="https://food-delivery-backend-whsh.onrender.com"
+
   const [orders, setOrders] = useState([]);
   const fetchAllOrders = async (req, res) => {
     const response = await axios.get(url + "/api/order/list");
