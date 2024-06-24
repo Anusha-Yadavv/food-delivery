@@ -3,6 +3,8 @@ import "./FoodItem.css";
 import { assets, food_list } from "../../assets/assets";
 import { StoreContext } from "../Context/StoreContext";
 import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 // import { toast,  } from 'react-hot-toast';
 // import { Success } from 'react-hot-toast/dist/esm/components/Success';
 // import {Success} from 'react-hot-toast/dist/esm/components/Success'
