@@ -61,7 +61,7 @@ const Cart = () => {
               <b>Rs. {getTotalCartAmount()===0?0:getTotalCartAmount()+2}</b>
             </div>
           </div>
-          <button onClick={()=> !token ? toast("Please Sign in to place your order :)")navigate('/order')}>PROCEED TO CHECKOUT</button>
+          <button onClick={()=> !token ? toast("Please Sign in to place your order :)"):navigate('/order')}>PROCEED TO CHECKOUT</button>
 {/*                     <button onClick={()=> navigate('/order')}>PROCEED TO CHECKOUT</button> */}
 
 
