@@ -9,7 +9,7 @@ import Footer from './components/Footer/Footer'
 import LoginPopUp from './components/LoginPopUp/LoginPopUp'
 import Verify from './pages/Verify/Verify'
 import MyOrders from './pages/MyOrders/MyOrders'
-import { ToastContainer, toast } from 'react-toastify';
+// import { ToastContainer, toast } from 'react-toastify';
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
   return (
     <>
     <div className='app'>
-    <ToastContainer /> 
+{/*     <ToastContainer />  */}
 
       {showLogin?<LoginPopUp setShowLogin={setShowLogin}/>:<></>}
       <Navbar setShowLogin={setShowLogin}/>
