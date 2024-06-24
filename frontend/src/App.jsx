@@ -17,7 +17,7 @@ function App() {
   return (
     <>
     <div className='app'>
-    <ToastContainer /> 
+{/*     <ToastContainer />  */}
 
       {showLogin?<LoginPopUp setShowLogin={setShowLogin}/>:<></>}
       <Navbar setShowLogin={setShowLogin}/>
