@@ -36,7 +36,7 @@ const FoodItem = ({ id, name, description, image, price }) => {
           <div className="food-item-counter">
             <img
               onClick={() => {
-                toast(<b>Item removed cart!</b>);
+                toast(<b>Item removed from cart!</b>);
                 removeFromCart(id);
               }}
               src={assets.remove_icon_red}
