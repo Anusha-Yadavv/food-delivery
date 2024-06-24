@@ -1,18 +1,21 @@
 import React, { useContext, useState } from "react";
 import "./FoodItem.css";
-import { assets } from "../../assets/assets";
+import { assets, food_list } from "../../assets/assets";
 import { StoreContext } from "../Context/StoreContext";
 import { toast } from "react-toastify";
-
+// import { toast,  } from 'react-hot-toast';
+// import { Success } from 'react-hot-toast/dist/esm/components/Success';
+// import {Success} from 'react-hot-toast/dist/esm/components/Success'
 
 const FoodItem = ({ id, name, description, image, price }) => {
-  // const [itemCount,setItemCount]=useState(0);
-  const { cartItems, addToCart, removeFromCart,url } = useContext(StoreContext);
+  const { cartItems, addToCart, removeFromCart} =useContext(StoreContext);
+  const url = "http://localhost:8000";
+  // console.log(`image url : ${url+"/images/"+image}`)
+
   return (
     <div className="food-item">
       <div className="food-item-img-container">
-{/*         <img className="food-item-image" src={url+"/images/"+image} alt="" /> */}
-         <img
+        <img
           className="food-item-image"
           // src={url+"/images/"+image}
           src={image}
@@ -36,7 +39,7 @@ const FoodItem = ({ id, name, description, image, price }) => {
           <div className="food-item-counter">
             <img
               onClick={() => {
-                toast(<b>Item removed from cart!</b>);
+                toast(<b>Item removed cart!</b>);
                 removeFromCart(id);
               }}
               src={assets.remove_icon_red}
@@ -46,12 +49,11 @@ const FoodItem = ({ id, name, description, image, price }) => {
             <p>{cartItems[id]}</p>
             <img
               onClick={() => {
-              toast(<b>Item added to cart!</b>);
+                toast(<p>Item added to cart!</p>);
 
-              addToCart(id);
-
-              console.log("clicking");
-            }}
+                addToCart(id);
+                console.log("clicking");
+              }}
               src={assets.add_icon_green}
               alt=""
             />
@@ -64,7 +66,7 @@ const FoodItem = ({ id, name, description, image, price }) => {
           <img src={assets.rating_starts} alt="" />
         </div>
         <p className="food-item-dec">{description}</p>
-        <p className="food-item-price">RS. {price}</p>
+        <p className="food-item-price">${price}</p>
       </div>
     </div>
   );
